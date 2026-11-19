@@ -3,440 +3,320 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CORRECTO-CASH | Correction de textes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CORRECTO-CASH</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f7f6;
-  color: #172b24;
-}
-
-header {
-  background: #103c2b;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: #35d18b;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  margin-left: 12px;
-}
-
-.hero {
-  background: linear-gradient(135deg, #103c2b, #167a50);
-  color: white;
-  padding: 65px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 34px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  color: #d8eee3;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  background: #20c879;
-  color: #073522;
-  padding: 14px 25px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 850px;
-  margin: 35px auto;
-  padding: 15px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.section-title h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 30px;
-}
-
-.stat-card {
-  background: white;
-  padding: 20px 8px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 3px 12px #00000008;
-}
-
-.stat-card h3 {
-  color: #15945c;
-  font-size: 23px;
-  margin-bottom: 7px;
-}
-
-.stat-card p {
-  font-size: 12px;
-  color: #66736c;
-}
-
-.exercise {
-  background: white;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px #0000000c;
-}
-
-.exercise h2 {
-  margin-bottom: 15px;
-}
-
-.question {
-  background: #f0f7f3;
-  border-left: 4px solid #20bd77;
-  padding: 18px;
-  line-height: 1.7;
-  border-radius: 7px;
-  margin: 20px 0;
-}
-
-textarea {
-  width: 100%;
-  min-height: 110px;
-  padding: 14px;
-  border: 1px solid #ccd8d1;
-  border-radius: 8px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  resize: vertical;
-}
-
-textarea:focus {
-  outline: 2px solid #20bd77;
-  border-color: transparent;
-}
-
-.result {
-  margin-top: 18px;
-  padding: 15px;
-  border-radius: 8px;
-  display: none;
-  line-height: 1.6;
-}
-
-footer {
-  background: #103c2b;
-  color: white;
-  padding: 25px;
-  text-align: center;
-  margin-top: 45px;
-  font-size: 13px;
-}
-
-@media(max-width: 500px) {
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .stats {
-    gap: 7px;
-  }
-
-  .stat-card {
-    padding: 15px 5px;
-  }
-
-  .stat-card h3 {
-    font-size: 19px;
-  }
-
-  .stat-card p {
-    font-size: 10px;
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f2f7f4;color:#183329}
+header{background:#103c2b;color:white;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:21px;font-weight:bold}
+.logo span{color:#35d18b}
+main{max-width:650px;margin:30px auto;padding:15px}
+.card{background:white;padding:25px;border-radius:16px;box-shadow:0 5px 20px #00000010;margin-bottom:20px}
+h1,h2{text-align:center;margin-bottom:15px}
+.subtitle{text-align:center;color:#718078;margin-bottom:20px;font-size:14px}
+label{display:block;font-size:14px;font-weight:bold;margin:14px 0 7px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #d3ded7;border-radius:8px;font-size:15px;background:white}
+button,.btn{background:#16a466;color:white;border:0;border-radius:8px;padding:14px;width:100%;font-size:15px;font-weight:bold;cursor:pointer;margin-top:16px}
+button:disabled{opacity:.5}
+.switch{text-align:center;margin-top:18px;font-size:14px}
+.switch a{color:#15945c;font-weight:bold;cursor:pointer}
+.hidden{display:none!important}
+.hero{background:linear-gradient(135deg,#103c2b,#168457);color:white;padding:35px 20px;text-align:center;border-radius:14px;margin-bottom:20px}
+.hero p{line-height:1.6;margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}
+.stat{background:white;border-radius:10px;padding:15px 5px;text-align:center}
+.stat strong{display:block;color:#15945c;font-size:22px}
+.stat small{font-size:11px;color:#718078}
+.question{background:#edf7f1;padding:17px;border-left:4px solid #16a466;border-radius:8px;margin:18px 0;line-height:1.6}
+.message{padding:13px;border-radius:8px;margin-top:15px;display:none;font-size:14px;line-height:1.5}
+.good{background:#dcfce7;color:#166534}
+.bad{background:#fee2e2;color:#991b1b}
+.secondary{background:#e9f2ed;color:#164a32}
+footer{text-align:center;background:#103c2b;color:white;padding:25px;font-size:13px}
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">CORRECTO<span>-CASH</span></div>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#exercice">Exercices</a>
-  </nav>
+<div class="logo">CORRECTO<span>-CASH</span></div>
+<div style="font-size:12px">ESPACE MEMBRE</div>
 </header>
 
-<section class="hero" id="accueil">
-  <h1>Corrige. Apprends. Progresse.</h1>
+<main>
 
-  <p>
-    Développe tes compétences en français
-    grâce à nos exercices de correction de textes.
-  </p>
+<!-- INSCRIPTION -->
+<section id="register" class="card">
+<h1>Créer un compte</h1>
+<p class="subtitle">Bienvenue sur CORRECTO-CASH</p>
 
-  <a href="#exercice" class="btn">
-    Commencer un exercice
-  </a>
+<form id="registerForm">
+
+<label>Nom et prénom</label>
+<input id="fullname" required placeholder="Ex : Jean Dupont">
+
+<label>Pays de résidence</label>
+<select id="country" required>
+<option value="+229">🇧🇯 Bénin (+229)</option>
+<option value="+238">🇨🇻 Cap-Vert (+238)</option>
+<option value="+225">🇨🇮 Côte d'Ivoire (+225)</option>
+<option value="+220">🇬🇲 Gambie (+220)</option>
+<option value="+233">🇬🇭 Ghana (+233)</option>
+<option value="+224">🇬🇳 Guinée (+224)</option>
+<option value="+245">🇬🇼 Guinée-Bissau (+245)</option>
+<option value="+231">🇱🇷 Liberia (+231)</option>
+<option value="+234">🇳🇬 Nigeria (+234)</option>
+<option value="+221">🇸🇳 Sénégal (+221)</option>
+<option value="+232">🇸🇱 Sierra Leone (+232)</option>
+<option value="+228">🇹🇬 Togo (+228)</option>
+<option value="+226">🇧🇫 Burkina Faso (+226)</option>
+<option value="+223">🇲🇱 Mali (+223)</option>
+<option value="+227">🇳🇪 Niger (+227)</option>
+</select>
+
+<label>Numéro de téléphone</label>
+<input id="phone" type="tel" required placeholder="Votre numéro sans indicatif">
+
+<label>Mot de passe</label>
+<input id="password" type="password" required minlength="8" placeholder="8 caractères minimum">
+
+<label>Confirmer le mot de passe</label>
+<input id="confirm" type="password" required placeholder="Confirmer le mot de passe">
+
+<div id="registerMessage" class="message"></div>
+
+<button type="submit">Créer mon compte</button>
+</form>
+
+<div class="switch">
+Déjà membre ?
+<a onclick="showLogin()">Se connecter</a>
+</div>
 </section>
 
-<main class="container">
+<!-- CONNEXION -->
+<section id="login" class="card hidden">
+<h1>Connexion</h1>
+<p class="subtitle">Accède à ton espace personnel</p>
 
-  <div class="section-title">
-    <h2>Ton espace de correction</h2>
-    <p>Entraîne-toi chaque jour.</p>
-  </div>
+<form id="loginForm">
+<label>Numéro de téléphone</label>
+<input id="loginPhone" type="tel" required placeholder="Numéro de téléphone">
 
-  <div class="stats">
+<label>Mot de passe</label>
+<input id="loginPassword" type="password" required placeholder="Mot de passe">
 
-    <div class="stat-card">
-      <h3 id="count">0/10</h3>
-      <p>Exercices réalisés</p>
-    </div>
+<div id="loginMessage" class="message"></div>
+<button type="submit">Se connecter</button>
+</form>
 
-    <div class="stat-card">
-      <h3 id="points">0</h3>
-      <p>Points obtenus</p>
-    </div>
+<div class="switch">
+Pas encore membre ?
+<a onclick="showRegister()">Créer un compte</a>
+</div>
+</section>
 
-    <div class="stat-card">
-      <h3 id="remaining">10</h3>
-      <p>Exercices restants</p>
-    </div>
+<!-- ESPACE MEMBRE -->
+<section id="dashboard" class="hidden">
 
-  </div>
+<div class="hero">
+<h1>Bienvenue sur CORRECTO-CASH</h1>
+<p>Corrige. Apprends. Progresse.</p>
+<p id="memberName"></p>
+</div>
 
-  <section class="exercise" id="exercice">
+<div class="stats">
+<div class="stat">
+<strong id="count">0/10</strong>
+<small>Exercices réalisés</small>
+</div>
+<div class="stat">
+<strong id="points">0</strong>
+<small>Points obtenus</small>
+</div>
+<div class="stat">
+<strong id="remaining">10</strong>
+<small>Restants</small>
+</div>
+</div>
 
-    <h2>Exercice de correction</h2>
+<section class="card">
+<h2>Exercice de correction</h2>
+<p id="number">Exercice 1 sur 10</p>
 
-    <p id="number">Exercice 1 sur 10</p>
+<div class="question">
+<strong>Corrige cette phrase :</strong>
+<p id="sentence" style="margin-top:10px"></p>
+</div>
 
-    <div class="question">
-      <strong>Corrige cette phrase :</strong>
-      <p id="sentence" style="margin-top:10px">
-        Les enfant joue dans le jardin.
-      </p>
-    </div>
+<textarea id="answer" rows="4" placeholder="Écris ta correction ici..."></textarea>
 
-    <textarea
-      id="answer"
-      placeholder="Écris ici la phrase correctement..."
-    ></textarea>
+<button id="checkBtn" onclick="checkAnswer()">Vérifier ma réponse</button>
 
-    <br><br>
+<div id="result" class="message"></div>
 
-    <button class="btn" id="checkBtn" onclick="checkAnswer()">
-      Vérifier ma réponse
-    </button>
+<button id="nextBtn" class="hidden" onclick="nextExercise()">Exercice suivant</button>
+</section>
 
-    <div class="result" id="result"></div>
-
-    <br>
-
-    <button class="btn" id="nextBtn"
-      onclick="nextExercise()" style="display:none">
-      Exercice suivant
-    </button>
-
-  </section>
+<button onclick="logout()" style="background:#a33">Déconnexion</button>
+</section>
 
 </main>
 
 <footer>
-  <p><strong>CORRECTO-CASH</strong></p>
-  <p>Une meilleure maîtrise du français commence ici.</p>
-  <p style="margin-top:10px">© 2026 CORRECTO-CASH</p>
+<strong>CORRECTO-CASH</strong>
+<p style="margin-top:8px">Une meilleure maîtrise du français commence ici.</p>
+<p style="margin-top:8px">© 2026 CORRECTO-CASH</p>
 </footer>
 
 <script>
+const countries = document.getElementById("country");
 
-const exercises = [
-  {
-    question: "Les enfant joue dans le jardin.",
-    answer: "Les enfants jouent dans le jardin."
-  },
-  {
-    question: "Elle sont partie à l'école.",
-    answer: "Elles sont parties à l'école."
-  },
-  {
-    question: "Nous avont beaucoup de travail.",
-    answer: "Nous avons beaucoup de travail."
-  },
-  {
-    question: "Il faut que tu vient demain.",
-    answer: "Il faut que tu viennes demain."
-  },
-  {
-    question: "Les maison sont très belle.",
-    answer: "Les maisons sont très belles."
-  },
-  {
-    question: "J'ai manger avant de partir.",
-    answer: "J'ai mangé avant de partir."
-  },
-  {
-    question: "Vous êtes arriver en retard.",
-    answer: "Vous êtes arrivés en retard."
-  },
-  {
-    question: "Les fille chante une chanson.",
-    answer: "Les filles chantent une chanson."
-  },
-  {
-    question: "Mon frère et moi est content.",
-    answer: "Mon frère et moi sommes contents."
-  },
-  {
-    question: "Il y a beaucoup de personne ici.",
-    answer: "Il y a beaucoup de personnes ici."
-  }
-];
-
+let member = null;
 let current = 0;
-let points = 0;
 let completed = 0;
+let points = 0;
 let answered = false;
 
-const today = new Date().toLocaleDateString("fr-FR");
+const exercises = [
+["Les enfant joue dans le jardin.","Les enfants jouent dans le jardin."],
+["Elle sont partie à l'école.","Elles sont parties à l'école."],
+["Nous avont beaucoup de travail.","Nous avons beaucoup de travail."],
+["Il faut que tu vient demain.","Il faut que tu viennes demain."],
+["Les maison sont très belle.","Les maisons sont très belles."],
+["J'ai manger avant de partir.","J'ai mangé avant de partir."],
+["Vous êtes arriver en retard.","Vous êtes arrivés en retard."],
+["Les fille chante une chanson.","Les filles chantent une chanson."],
+["Mon frère et moi est content.","Mon frère et moi sommes contents."],
+["Il y a beaucoup de personne ici.","Il y a beaucoup de personnes ici."]
+];
 
-function normalize(text) {
-  return text
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .replace(/[.!?]+$/, "");
+function showRegister(){
+  register.classList.remove("hidden");
+  login.classList.add("hidden");
+  dashboard.classList.add("hidden");
 }
 
-function updateDisplay() {
-  document.getElementById("count").textContent =
-    completed + "/10";
-
-  document.getElementById("points").textContent =
-    points;
-
-  document.getElementById("remaining").textContent =
-    10 - completed;
+function showLogin(){
+  register.classList.add("hidden");
+  login.classList.remove("hidden");
+  dashboard.classList.add("hidden");
 }
 
-function showExercise() {
-  document.getElementById("number").textContent =
-    "Exercice " + (current + 1) + " sur 10";
-
-  document.getElementById("sentence").textContent =
-    exercises[current].question;
-
-  document.getElementById("answer").value = "";
-
-  document.getElementById("result").style.display = "none";
-
-  document.getElementById("nextBtn").style.display = "none";
-
-  document.getElementById("checkBtn").style.display =
-    "inline-block";
-
-  answered = false;
+function showDashboard(){
+  register.classList.add("hidden");
+  login.classList.add("hidden");
+  dashboard.classList.remove("hidden");
+  memberName.textContent="Membre : "+member.name;
+  updateDisplay();
+  showExercise();
 }
 
-function checkAnswer() {
+function message(id,text,type){
+  const el=document.getElementById(id);
+  el.textContent=text;
+  el.className="message "+type;
+  el.style.display="block";
+}
 
-  if (answered) return;
+registerForm.addEventListener("submit",function(e){
+  e.preventDefault();
 
-  const input = document.getElementById("answer").value;
-  const result = document.getElementById("result");
+  const name=fullname.value.trim();
+  const phone=phoneInput();
+  const pass=password.value;
+  const confirmPass=confirm.value;
 
-  if (!input.trim()) {
-    alert("Écris d'abord ta correction.");
+  if(pass!==confirmPass){
+    message("registerMessage","Les deux mots de passe ne correspondent pas.","bad");
     return;
   }
 
-  answered = true;
-  completed++;
-
-  if (
-    normalize(input) ===
-    normalize(exercises[current].answer)
-  ) {
-    points += 10;
-
-    result.style.background = "#dcfce7";
-    result.style.color = "#166534";
-
-    result.innerHTML =
-      "<strong>Bonne réponse !</strong><br>Tu obtiens 10 points.";
-  } else {
-    result.style.background = "#fee2e2";
-    result.style.color = "#991b1b";
-
-    result.innerHTML =
-      "<strong>Réponse incorrecte.</strong><br>" +
-      "Correction attendue : " +
-      exercises[current].answer;
+  if(!/^[0-9]{6,15}$/.test(phone)){
+    message("registerMessage","Vérifie ton numéro de téléphone.","bad");
+    return;
   }
 
-  result.style.display = "block";
+  message("registerMessage",
+  "Interface de démonstration : le service sécurisé de création de comptes et de vérification SMS doit encore être connecté. Aucun compte réel n'a été créé.",
+  "secondary");
+});
 
-  document.getElementById("checkBtn").style.display = "none";
+function phoneInput(){
+  return document.getElementById("phone").value.replace(/\s/g,"");
+}
 
-  if (completed < 10) {
-    document.getElementById("nextBtn").style.display =
-      "inline-block";
-  } else {
-    result.innerHTML +=
-      "<br><br><strong>Session terminée !</strong>";
+loginForm.addEventListener("submit",function(e){
+  e.preventDefault();
+  message("loginMessage",
+  "La connexion réelle sera disponible après l'installation du système sécurisé de comptes.",
+  "secondary");
+});
+
+function normalize(t){
+  return t.trim().toLowerCase().replace(/\s+/g," ").replace(/[.!?]+$/,"");
+}
+
+function updateDisplay(){
+  document.getElementById("count").textContent=completed+"/10";
+  document.getElementById("points").textContent=points;
+  document.getElementById("remaining").textContent=10-completed;
+}
+
+function showExercise(){
+  document.getElementById("number").textContent="Exercice "+(current+1)+" sur 10";
+  document.getElementById("sentence").textContent=exercises[current][0];
+  document.getElementById("answer").value="";
+  document.getElementById("result").style.display="none";
+  document.getElementById("checkBtn").classList.remove("hidden");
+  document.getElementById("nextBtn").classList.add("hidden");
+  answered=false;
+}
+
+function checkAnswer(){
+  if(answered)return;
+
+  const input=document.getElementById("answer").value;
+  if(!input.trim()){
+    alert("Écris ta correction.");
+    return;
+  }
+
+  answered=true;
+  completed++;
+
+  const result=document.getElementById("result");
+
+  if(normalize(input)===normalize(exercises[current][1])){
+    points+=10;
+    message("result","Bonne réponse ! Tu obtiens 10 points.","good");
+  }else{
+    message("result","Réponse incorrecte. Correction attendue : "+exercises[current][1],"bad");
+  }
+
+  document.getElementById("checkBtn").classList.add("hidden");
+
+  if(completed<10){
+    document.getElementById("nextBtn").classList.remove("hidden");
+  }else{
+    result.textContent+=" Session de démonstration terminée.";
   }
 
   updateDisplay();
 }
 
-function nextExercise() {
-
-  if (completed >= 10) return;
-
+function nextExercise(){
+  if(completed>=10)return;
   current++;
   showExercise();
 }
 
-updateDisplay();
-showExercise();
-
+function logout(){
+  member=null;
+  showRegister();
+}
 </script>
 
 </body>
