@@ -8,56 +8,216 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f2f7f4;color:#183329}
-header{background:#103c2b;color:white;padding:18px;display:flex;justify-content:space-between;align-items:center}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f2f7f4;
+  color:#183329
+}
+
+header{
+  background:#103c2b;
+  color:white;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+
 .logo{font-size:21px;font-weight:bold}
 .logo span{color:#35d18b}
+
 main{max-width:650px;margin:30px auto;padding:15px}
-.card{background:white;padding:25px;border-radius:16px;box-shadow:0 5px 20px #00000010;margin-bottom:20px}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 5px 20px #00000010;
+  margin-bottom:20px
+}
+
 h1,h2{text-align:center;margin-bottom:15px}
-.subtitle{text-align:center;color:#718078;margin-bottom:20px;font-size:14px}
-label{display:block;font-size:14px;font-weight:bold;margin:14px 0 7px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d3ded7;border-radius:8px;font-size:15px;background:white}
-button,.btn{background:#16a466;color:white;border:0;border-radius:8px;padding:14px;width:100%;font-size:15px;font-weight:bold;cursor:pointer;margin-top:16px}
+
+.subtitle{
+  text-align:center;
+  color:#718078;
+  margin-bottom:20px;
+  font-size:14px
+}
+
+label{
+  display:block;
+  font-size:14px;
+  font-weight:bold;
+  margin:14px 0 7px
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d3ded7;
+  border-radius:8px;
+  font-size:15px;
+  background:white
+}
+
+/* Champs de mot de passe avec visibilité */
+.password-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #d3ded7;
+  border-radius:8px;
+  background:white;
+  overflow:hidden;
+  width:100%
+}
+
+.password-box input{
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:none;
+  box-shadow:none;
+  background:transparent
+}
+
+.password-box .eye-btn{
+  width:52px;
+  flex-shrink:0;
+  margin:0;
+  padding:12px 8px;
+  background:white;
+  color:#183329;
+  font-size:21px;
+  border:0;
+  cursor:pointer
+}
+
+.password-box .eye-btn:hover{
+  background:#edf7f1
+}
+
+button,.btn{
+  background:#16a466;
+  color:white;
+  border:0;
+  border-radius:8px;
+  padding:14px;
+  width:100%;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:16px
+}
+
 button:disabled{opacity:.5}
-.switch{text-align:center;margin-top:18px;font-size:14px}
-.switch a{color:#15945c;font-weight:bold;cursor:pointer}
+
+.switch{
+  text-align:center;
+  margin-top:18px;
+  font-size:14px
+}
+
+.switch a{
+  color:#15945c;
+  font-weight:bold;
+  cursor:pointer
+}
+
 .hidden{display:none!important}
-.hero{background:linear-gradient(135deg,#103c2b,#168457);color:white;padding:35px 20px;text-align:center;border-radius:14px;margin-bottom:20px}
+
+.hero{
+  background:linear-gradient(135deg,#103c2b,#168457);
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+  border-radius:14px;
+  margin-bottom:20px
+}
+
 .hero p{line-height:1.6;margin-top:10px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}
-.stat{background:white;border-radius:10px;padding:15px 5px;text-align:center}
-.stat strong{display:block;color:#15945c;font-size:22px}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin:20px 0
+}
+
+.stat{
+  background:white;
+  border-radius:10px;
+  padding:15px 5px;
+  text-align:center
+}
+
+.stat strong{
+  display:block;
+  color:#15945c;
+  font-size:22px
+}
+
 .stat small{font-size:11px;color:#718078}
-.question{background:#edf7f1;padding:17px;border-left:4px solid #16a466;border-radius:8px;margin:18px 0;line-height:1.6}
-.message{padding:13px;border-radius:8px;margin-top:15px;display:none;font-size:14px;line-height:1.5}
+
+.question{
+  background:#edf7f1;
+  padding:17px;
+  border-left:4px solid #16a466;
+  border-radius:8px;
+  margin:18px 0;
+  line-height:1.6
+}
+
+.message{
+  padding:13px;
+  border-radius:8px;
+  margin-top:15px;
+  display:none;
+  font-size:14px;
+  line-height:1.5
+}
+
 .good{background:#dcfce7;color:#166534}
 .bad{background:#fee2e2;color:#991b1b}
 .secondary{background:#e9f2ed;color:#164a32}
-footer{text-align:center;background:#103c2b;color:white;padding:25px;font-size:13px}
+
+footer{
+  text-align:center;
+  background:#103c2b;
+  color:white;
+  padding:25px;
+  font-size:13px
+}
+
+@media(max-width:480px){
+  main{margin:20px auto;padding:12px}
+  .card{padding:22px 18px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">CORRECTO<span>-CASH</span></div>
-<div style="font-size:12px">ESPACE MEMBRE</div>
+  <div class="logo">CORRECTO<span>-CASH</span></div>
+  <div style="font-size:12px">ESPACE MEMBRE</div>
 </header>
 
 <main>
 
 <!-- INSCRIPTION -->
 <section id="register" class="card">
+
 <h1>Créer un compte</h1>
 <p class="subtitle">Bienvenue sur CORRECTO-CASH</p>
 
 <form id="registerForm">
 
-<label>Nom et prénom</label>
+<label for="fullname">Nom et prénom</label>
 <input id="fullname" required placeholder="Ex : Jean Dupont">
 
-<label>Pays de résidence</label>
+<label for="country">Pays de résidence</label>
 <select id="country" required>
 <option value="+229">🇧🇯 Bénin (+229)</option>
 <option value="+238">🇨🇻 Cap-Vert (+238)</option>
@@ -76,46 +236,70 @@ footer{text-align:center;background:#103c2b;color:white;padding:25px;font-size:1
 <option value="+227">🇳🇪 Niger (+227)</option>
 </select>
 
-<label>Numéro de téléphone</label>
+<label for="phone">Numéro de téléphone</label>
 <input id="phone" type="tel" required placeholder="Votre numéro sans indicatif">
 
-<label>Mot de passe</label>
-<input id="password" type="password" required minlength="8" placeholder="8 caractères minimum">
+<label for="password">Mot de passe</label>
+<div class="password-box">
+  <input id="password" type="password" required minlength="8"
+  placeholder="8 caractères minimum">
+  <button type="button" class="eye-btn"
+  onclick="togglePassword('password',this)"
+  aria-label="Afficher le mot de passe">👁️</button>
+</div>
 
-<label>Confirmer le mot de passe</label>
-<input id="confirm" type="password" required placeholder="Confirmer le mot de passe">
+<label for="confirmPassword">Confirmer le mot de passe</label>
+<div class="password-box">
+  <input id="confirmPassword" type="password" required
+  minlength="8" placeholder="Confirmer le mot de passe">
+  <button type="button" class="eye-btn"
+  onclick="togglePassword('confirmPassword',this)"
+  aria-label="Afficher la confirmation du mot de passe">👁️</button>
+</div>
 
 <div id="registerMessage" class="message"></div>
 
 <button type="submit">Créer mon compte</button>
+
 </form>
 
 <div class="switch">
 Déjà membre ?
 <a onclick="showLogin()">Se connecter</a>
 </div>
+
 </section>
 
 <!-- CONNEXION -->
 <section id="login" class="card hidden">
+
 <h1>Connexion</h1>
 <p class="subtitle">Accède à ton espace personnel</p>
 
 <form id="loginForm">
-<label>Numéro de téléphone</label>
+
+<label for="loginPhone">Numéro de téléphone</label>
 <input id="loginPhone" type="tel" required placeholder="Numéro de téléphone">
 
-<label>Mot de passe</label>
-<input id="loginPassword" type="password" required placeholder="Mot de passe">
+<label for="loginPassword">Mot de passe</label>
+<div class="password-box">
+  <input id="loginPassword" type="password" required placeholder="Mot de passe">
+  <button type="button" class="eye-btn"
+  onclick="togglePassword('loginPassword',this)"
+  aria-label="Afficher le mot de passe">👁️</button>
+</div>
 
 <div id="loginMessage" class="message"></div>
+
 <button type="submit">Se connecter</button>
+
 </form>
 
 <div class="switch">
 Pas encore membre ?
 <a onclick="showRegister()">Créer un compte</a>
 </div>
+
 </section>
 
 <!-- ESPACE MEMBRE -->
@@ -128,21 +312,26 @@ Pas encore membre ?
 </div>
 
 <div class="stats">
+
 <div class="stat">
 <strong id="count">0/10</strong>
 <small>Exercices réalisés</small>
 </div>
+
 <div class="stat">
 <strong id="points">0</strong>
 <small>Points obtenus</small>
 </div>
+
 <div class="stat">
 <strong id="remaining">10</strong>
 <small>Restants</small>
 </div>
+
 </div>
 
 <section class="card">
+
 <h2>Exercice de correction</h2>
 <p id="number">Exercice 1 sur 10</p>
 
@@ -151,28 +340,44 @@ Pas encore membre ?
 <p id="sentence" style="margin-top:10px"></p>
 </div>
 
-<textarea id="answer" rows="4" placeholder="Écris ta correction ici..."></textarea>
+<textarea id="answer" rows="4"
+placeholder="Écris ta correction ici..."></textarea>
 
-<button id="checkBtn" onclick="checkAnswer()">Vérifier ma réponse</button>
+<button id="checkBtn" onclick="checkAnswer()">
+Vérifier ma réponse
+</button>
 
 <div id="result" class="message"></div>
 
-<button id="nextBtn" class="hidden" onclick="nextExercise()">Exercice suivant</button>
+<button id="nextBtn" class="hidden" onclick="nextExercise()">
+Exercice suivant
+</button>
+
 </section>
 
-<button onclick="logout()" style="background:#a33">Déconnexion</button>
+<button onclick="logout()" style="background:#a33">
+Déconnexion
+</button>
+
 </section>
 
 </main>
 
 <footer>
 <strong>CORRECTO-CASH</strong>
-<p style="margin-top:8px">Une meilleure maîtrise du français commence ici.</p>
+<p style="margin-top:8px">
+Une meilleure maîtrise du français commence ici.
+</p>
 <p style="margin-top:8px">© 2026 CORRECTO-CASH</p>
 </footer>
 
 <script>
-const countries = document.getElementById("country");
+const registerSection = document.getElementById("register");
+const loginSection = document.getElementById("login");
+const dashboardSection = document.getElementById("dashboard");
+
+const registerForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
 
 let member = null;
 let current = 0;
@@ -193,92 +398,158 @@ const exercises = [
 ["Il y a beaucoup de personne ici.","Il y a beaucoup de personnes ici."]
 ];
 
+/* AFFICHER OU MASQUER LE MOT DE PASSE */
+function togglePassword(id,button){
+
+  const field=document.getElementById(id);
+
+  if(field.type==="password"){
+    field.type="text";
+    button.textContent="🙈";
+    button.setAttribute("aria-label","Masquer le mot de passe");
+  }else{
+    field.type="password";
+    button.textContent="👁️";
+    button.setAttribute("aria-label","Afficher le mot de passe");
+  }
+}
+
+/* NAVIGATION */
 function showRegister(){
-  register.classList.remove("hidden");
-  login.classList.add("hidden");
-  dashboard.classList.add("hidden");
+  registerSection.classList.remove("hidden");
+  loginSection.classList.add("hidden");
+  dashboardSection.classList.add("hidden");
 }
 
 function showLogin(){
-  register.classList.add("hidden");
-  login.classList.remove("hidden");
-  dashboard.classList.add("hidden");
+  registerSection.classList.add("hidden");
+  loginSection.classList.remove("hidden");
+  dashboardSection.classList.add("hidden");
 }
 
 function showDashboard(){
-  register.classList.add("hidden");
-  login.classList.add("hidden");
-  dashboard.classList.remove("hidden");
-  memberName.textContent="Membre : "+member.name;
+  registerSection.classList.add("hidden");
+  loginSection.classList.add("hidden");
+  dashboardSection.classList.remove("hidden");
+
+  document.getElementById("memberName").textContent=
+  "Membre : "+member.name;
+
   updateDisplay();
   showExercise();
 }
 
+/* MESSAGES */
 function message(id,text,type){
+
   const el=document.getElementById(id);
+
   el.textContent=text;
   el.className="message "+type;
   el.style.display="block";
 }
 
+/* INSCRIPTION */
 registerForm.addEventListener("submit",function(e){
+
   e.preventDefault();
 
-  const name=fullname.value.trim();
-  const phone=phoneInput();
-  const pass=password.value;
-  const confirmPass=confirm.value;
+  const name=document.getElementById("fullname").value.trim();
+  const phone=document.getElementById("phone").value.replace(/\s/g,"");
+  const pass=document.getElementById("password").value;
+  const confirmPass=document.getElementById("confirmPassword").value;
+
+  const country=document.getElementById("country").value;
+
+  document.getElementById("registerMessage").style.display="none";
+
+  if(pass.length<8){
+    message("registerMessage",
+    "Le mot de passe doit contenir au moins 8 caractères.",
+    "bad");
+    return;
+  }
 
   if(pass!==confirmPass){
-    message("registerMessage","Les deux mots de passe ne correspondent pas.","bad");
+    message("registerMessage",
+    "Les deux mots de passe ne correspondent pas.",
+    "bad");
+    document.getElementById("confirmPassword").focus();
     return;
   }
 
   if(!/^[0-9]{6,15}$/.test(phone)){
-    message("registerMessage","Vérifie ton numéro de téléphone.","bad");
+    message("registerMessage",
+    "Vérifie ton numéro de téléphone.",
+    "bad");
     return;
   }
 
   message("registerMessage",
   "Interface de démonstration : le service sécurisé de création de comptes et de vérification SMS doit encore être connecté. Aucun compte réel n'a été créé.",
   "secondary");
+
 });
 
+/* NUMÉRO DE TÉLÉPHONE */
 function phoneInput(){
   return document.getElementById("phone").value.replace(/\s/g,"");
 }
 
+/* CONNEXION */
 loginForm.addEventListener("submit",function(e){
+
   e.preventDefault();
+
   message("loginMessage",
   "La connexion réelle sera disponible après l'installation du système sécurisé de comptes.",
   "secondary");
+
 });
 
+/* EXERCICES */
 function normalize(t){
-  return t.trim().toLowerCase().replace(/\s+/g," ").replace(/[.!?]+$/,"");
+  return t.trim().toLowerCase()
+  .replace(/\s+/g," ")
+  .replace(/[.!?]+$/,"");
 }
 
 function updateDisplay(){
-  document.getElementById("count").textContent=completed+"/10";
+
+  document.getElementById("count").textContent=
+  completed+"/10";
+
   document.getElementById("points").textContent=points;
-  document.getElementById("remaining").textContent=10-completed;
+
+  document.getElementById("remaining").textContent=
+  10-completed;
 }
 
 function showExercise(){
-  document.getElementById("number").textContent="Exercice "+(current+1)+" sur 10";
-  document.getElementById("sentence").textContent=exercises[current][0];
+
+  document.getElementById("number").textContent=
+  "Exercice "+(current+1)+" sur 10";
+
+  document.getElementById("sentence").textContent=
+  exercises[current][0];
+
   document.getElementById("answer").value="";
+
   document.getElementById("result").style.display="none";
+
   document.getElementById("checkBtn").classList.remove("hidden");
+
   document.getElementById("nextBtn").classList.add("hidden");
+
   answered=false;
 }
 
 function checkAnswer(){
+
   if(answered)return;
 
   const input=document.getElementById("answer").value;
+
   if(!input.trim()){
     alert("Écris ta correction.");
     return;
@@ -290,30 +561,47 @@ function checkAnswer(){
   const result=document.getElementById("result");
 
   if(normalize(input)===normalize(exercises[current][1])){
+
     points+=10;
-    message("result","Bonne réponse ! Tu obtiens 10 points.","good");
+
+    message("result",
+    "Bonne réponse ! Tu obtiens 10 points.",
+    "good");
+
   }else{
-    message("result","Réponse incorrecte. Correction attendue : "+exercises[current][1],"bad");
+
+    message("result",
+    "Réponse incorrecte. Correction attendue : "+
+    exercises[current][1],
+    "bad");
+
   }
 
   document.getElementById("checkBtn").classList.add("hidden");
 
   if(completed<10){
+
     document.getElementById("nextBtn").classList.remove("hidden");
+
   }else{
+
     result.textContent+=" Session de démonstration terminée.";
+
   }
 
   updateDisplay();
 }
 
 function nextExercise(){
+
   if(completed>=10)return;
+
   current++;
   showExercise();
 }
 
 function logout(){
+
   member=null;
   showRegister();
 }
